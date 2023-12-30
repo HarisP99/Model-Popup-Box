@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Popup Box</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Isključivanje zahtjeva za favicon.ico -->
+    <link rel="icon" href="data:,">
+
+</head>
+<body>
+    <!-- Glavni kontejner stranice -->
+    <div class="container"></div>
+
+    <!-- Popup modelni prozor -->
+    <div id="modelBox">
+        <!-- Slika u modelnom prozoru -->
+        <img src="images/banner.png" width="100%">
+        <!-- Tekst ponude u modelnom prozoru -->
+        <div class="offer-text">
+            <h2>Popust 15%</h2>
+            <small>na sve kozmetičke proizvode</small>
+            <p>
+                <!-- Dummy tekst za opis ponude -->
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque quasi sint, 
+                iste quia fuga natus maiores ratione optio sed non reiciendis dolor perferendis 
+                praesentium commodi architecto quos? Aut, totam ea!
+            </p>
+            <!-- Forma za prijavu -->
+            <form>
+                <input type="email" placeholder="Email adresa">
+                <button type="submit">Prijavi se</button>
+            </form>
+        </div>
+        <!-- Ikona za zatvaranje modelnog prozora -->
+        <img src="images/close.png" class="close-icon" onclick="closeModel()">
+    </div>
+
+    <!-- JavaScript kod za upravljanje modelnim prozorom -->
+    <script>
+        // Dobavljanje referenca na modelni prozor
+        let modelBox = document.getElementById("modelBox");
+
+        // Kada miš izađe izvan granica prozora, prikaži modelni prozor
+        document.onmouseout = function(){
+            modelBox.style.display = "block";
+        }
+
+        // Funkcija za zatvaranje modelnog prozora
+        function closeModel(){
+            modelBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
